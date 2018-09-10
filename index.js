@@ -1,6 +1,8 @@
 function produceDrivingRange(blockRange) {
   return function(distance) {
-    console.log(distance + blockRange)
+    if (distance < blockRange) {
+      return true
+    } else {return `${distance - blockRange} blocks out of range`}
   }
 }
 debugger;
